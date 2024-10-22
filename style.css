@@ -1,0 +1,289 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+ margin: 0;
+ font-family:"Do Hyeon";
+}
+.main{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: url("/images/1.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+//  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.ilu p{
+ color: white;
+ font-size: 5rem;
+ text-align: center;
+ animation: glow 3s infinite;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+    }
+    50% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+    }
+}
+.btns{
+ display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.div2{
+ height: 70px;
+ width: 80%;
+ position: absolute;
+ justify-content: center;
+ display: flex;
+ align-items: center;
+ bottom: 200px;
+ position: absolute;
+}
+ .btn{
+  flex: 1 1 auto;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px #000;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  color: red;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+ }
+ .right{
+  color:#84D;
+ }
+ .next{
+  height: 100vh;
+  width: 100%;
+  background: url("/images/tom.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
+  justify-content: center;
+ }
+
+ .serious{
+  font-size: 4.5rem;
+  top: 50px;
+  right:20px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 0px rgba(78,76,80,0.5),
+               2px 2px 0px rgba(78,76,80,0.4),
+               3px 3px 0px rgba(78,76,80,0.3),
+               4px 4px 0px rgba(78,76,80,0.2),
+               5px 5px 0px rgba(78,76,80,0.1);
+  transform: rotateZ(-5deg);
+ }
+.serious1{
+ position: absolute;
+ top: 80%;
+ right: 30px;
+ font-size: 3rem;
+ color: white;
+}
+.div3{
+ height: 100vh;
+ width: 100%;
+ position:absolute;
+ display: flex;
+// align-items: center;
+} 
+#nope , #yup{
+ position: absolute;
+ display:flex;
+ padding: 10px 20px;
+ border:2px solid black;
+}
+#yup{
+ right: 20px;
+}
+#nope{
+ left: 20px;
+ z-index: 2;
+}
+ .btn1{
+  flex: 1 1 auto;
+  margin: 15px;
+  padding: 10px;
+  transition: 0.5s;
+  text-shadow: 0px 0px 10px rgba(20,20,20,0.5);
+  box-shadow: 1 1 20px #000;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  font-size: 1.4rem;
+  color: #ef31c4;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+ }
+ 
+ .next2{
+  height: 100vh;
+  width: 100%;
+  background: #FFFFFF;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
+  justify-content: center;
+ }
+ .shock{
+  height: 14.5rem;
+  width: 13.5rem;
+  background: url("/images/sh.gif");
+  position: absolute;
+  top: 12rem;
+  background-position: center;
+  background-size: cover;
+ }
+ .noo{
+  top: 50px;
+  position: absolute;
+  font-size: 5rem;
+  color: black;
+  text-align: center;
+ }
+ .desc{
+  position: absolute;
+  bottom: 150px;
+  font-size: 2rem;
+  text-align: center;
+ }
+ .btnd{
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(20,20,20,0.5);
+  box-shadow: 1 1 20px #000;
+  border: none;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  border-radius: 6px;
+  text-decoration: none;
+  position: absolute;
+ }
+ #back{
+  bottom: 20px;
+  color: white;
+  background-color: red;
+ }
+ .pfinal{
+ height: 100vh;
+  width: 100%;
+  background: rgb(129,239,231);
+background: linear-gradient(180deg, rgba(129,239,231,1) 0%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 55%, rgba(246,153,255,1) 100%);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
+  justify-content: center;
+ }
+ .hug{
+  height: 14.5rem;
+  width: 13.5rem;
+  background: url("/images/lob.gif");
+  position: absolute;
+  top: 12rem;
+  background-position: center;
+  background-size: cover;
+ }
+ .jldi{
+  top: 50px;
+  position: absolute;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+ }
+ .pfdesc{
+  position: absolute;
+  bottom: 150px;
+  font-size: 2rem;
+  text-align: center;
+ }
+ #pfinal{
+  bottom: 20px;
+  background: white;
+  color: red;
+  border-radius: 100px;
+  padding: 10px 25px;
+  cursor: pointer;
+ }
+ .final{
+  height: 100vh;
+  width: 100%;
+  background: url("/images/aj.jpg");
+// background: blue;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
+  justify-content: center;
+ }
+ .finalt {
+  top: 50px;
+  position: absolute;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+ }
+ 
+ .snow{
+   position: absolute;
+   top: -10%;
+   height: 10px;
+   width: 10px;
+   transition: transform 1s;
+   overflow: hidden;
+   background: rgba(255, 255, 255, 0.8);
+   border-radius: 50%;
+   animation: fall 2s linear infinite;
+ }
+
+ @keyframes fall {
+   to {
+        transform: translateY(95vh);
+      }
+}
+
+canvas{
+ display: block;
+ z-index: 10;
+ height: 100vh;
+ width: 100%;
+}
