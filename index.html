@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-<title>Birthday</title>
-<link rel="stylesheet" href="style.css">
+    <title>Birthday</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- INTRO -->
-<div id="intro" class="screen">
-    <div id="chatBox"></div>
-    <button id="nextBtn" name="BUTTON" style="display:none;">Darna nhi hai 🤭</button>
-</div>
-
-<!-- LOGIN -->
-<div id="login" class="screen">
-    <h2>Wese naam fill kr skte ho...</h2>
-    <input id="nameInput" placeholder="Your name">
-    <br><br>
-    <button id="startBtn" name="BUTTON">Chale ab aage</button>
-</div>
-
-<!-- GAME -->
-<div id="game" class="screen"></div>
-
-<!-- GALLERY -->
-<div id="gallery" class="screen">
-    <h2 class="glow-animate">Pahchante to hoge 🥱</h2>
-    <div id="photoGrid"></div>
-    <p id="galleryTimer"></p>
-    <button id="finalBtn">Are bss kroo !!</button>
-</div>
-
-<!-- FINAL -->
-<div id="final" class="screen">
-    <div id="dreamBg">
-        <div class="layer layer-back"></div>
-        <div class="layer layer-front"></div>
+    <!-- INTRO -->
+    <div id="intro" class="screen">
+        <div id="chatBox"></div>
+        <button id="nextBtn" name="BUTTON" style="display:none;">Darna nhi hai 🤭</button>
     </div>
-</div>
 
-<!-- 💖 EMOTIONAL SCREEN (SEPARATE) -->
-<div id="emotionalScreen" class="screen">
-    <div class="emotionalBox">
-        <div id="emotionalText"></div>
+    <!-- NAME -->
+    <div id="login" class="screen">
+        <h2>Chlo chlo apna name enter karo..</h2>
+        <input id="nameInput" placeholder="Your name">
+        <br><br>
+        <button id="startBtn" name="BUTTON">Kar diya 🥱</button>
     </div>
-</div>
-    
 
+    <!-- GAME -->
+    <div id="game" class="screen"></div>
+
+    <!-- GALLERY -->
+    <div id="gallery" class="screen">
+        <h2 class="glow-animate">Pahchante to hoge 🥱</h2>
+        <div id="photoGrid"></div>
+        <p id="galleryTimer"></p>
+        <button id="finalBtn">Are bss kroo !!</button>
+    </div>
+
+    <!-- WISH -->
+    <div id="final" class="screen">
+        <div id="dreamBg">
+            <div class="layer layer-back"></div>
+            <div class="layer layer-front"></div>
+        </div>
+    </div>
+
+    <!-- EMOTIONAL SCREEN  -->
+    <div id="emotionalScreen" class="screen">
+        <div class="emotionalBox">
+            <div id="emotionalText"></div>
+        </div>
+    </div>
+
+    <!-- DATE REVEAL  -->
     <div id="dateReveal" class="screen">
-    <canvas id="cinemaCanvas"></canvas>
-    <p id="dateHint">Tap to continue</p>
-</div>
-    
+        <canvas id="cinemaCanvas"></canvas>
+        <p id="dateHint">Tap to continue</p>
+    </div>
+
     <audio id="bgMusic">
-    <source src="audio/song.mp3" type="audio/mpeg">
-</audio>
+        <source src="audio/song.mp3" type="audio/mpeg">
+    </audio>
     <audio id="finalMusic" loop>
-    <source src="audio/final.mp3" type="audio/mpeg">
-</audio>
+        <source src="audio/final.mp3" type="audio/mpeg">
+    </audio>
     <audio id="galleryMusic" loop>
-    <source src="audio/gallery.mp3" type="audio/mpeg">
-</audio>
+        <source src="audio/gallery.mp3" type="audio/mpeg">
+    </audio>
     <audio id="birthdayExtra" src="audio/extra.mp3"></audio>
     <img id="char" src="images/char_idle.gif">
 
-<div id="charBubble"></div>
-    
-<script src="script.js"></script>
+    <div id="charBubble"></div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
