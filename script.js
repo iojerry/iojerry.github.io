@@ -99,7 +99,6 @@ function typeMessage(text, cb) {
 
     let cursorVisible = true;
 
-    // 💬 thinking delay before typing starts
     setTimeout(() => {
         requestAnimationFrame(animate);
     }, 500 + Math.random() * 800);
@@ -113,7 +112,6 @@ function typeMessage(text, cb) {
             currentText += text.charAt(i);
             i++;
 
-            // 🎯 dynamic speed
             let char = text.charAt(i);
 
             if (char === "." || char === "," || char === "!" || char === "?") {
@@ -125,7 +123,6 @@ function typeMessage(text, cb) {
             lastTime = time;
         }
 
-        // ✍️ blinking cursor
         if (Math.floor(time / 500) % 2 === 0) {
             msg.textContent = currentText + "|";
         } else {
@@ -216,9 +213,9 @@ function heartLevel(level) {
     function updateUI() {
         let percent = (score / target) * 100;
         let hints = {
-            1: "💡 Tap the glowing photos",
-            2: "⚡ Faster now! Tap quickly",
-            3: "🔥 Only correct ones count!",
+            1: "Tap the glowing photos",
+            2: "Faster now! Tap quickly",
+            3: "Only correct ones count!",
         };
         game.innerHTML = `
         <h2>Game Level ${level}</h2>
@@ -651,7 +648,7 @@ function boss() {
             t.remove();
 
             game.innerHTML = `  
-            <h2>😢 Try Again</h2>  
+            <h2>Try Again</h2>  
             <button onclick="boss()">Retry</button>  
         `;
         }
@@ -720,12 +717,10 @@ function showGallery() {
     btn.style.display = "none";
     timerEl.style.visibility = "hidden";
 
-    // ⏳ wait for gallery animation first
     setTimeout(() => {
 
         timerEl.style.visibility = "visible";
 
-        // ⏱ COUNTDOWN
         let time = 3;
 
         let countdown = setInterval(() => {
@@ -735,7 +730,6 @@ function showGallery() {
             if (time < 0) {
                 clearInterval(countdown);
 
-                // 💬 TEXT SEQUENCE
                 let texts = ["Wait...", "Not yet...", "Almost...", "Now!"];
                 let i = 0;
 
@@ -754,7 +748,6 @@ function showGallery() {
                         }, 300);
 
                     } else {
-                        // 🎯 SHOW BUTTON
                         timerEl.style.visibility = "hidden";
                         btn.style.display = "block";
                     }
@@ -931,7 +924,7 @@ function funnyStage3(next) {
 
     document.getElementById("deserveNo").onclick = () => {
         final.innerHTML = `
-            <h2>Kya yrr apne aap pr believe nhi hai</h2>
+            <h2>Ohh khud pr believe krne wali ladki</h2>
             <p>Mujhe lgta hai glti se select ho gaya hoga</p>
             <button id="retryBtn">Dubara try kro 🙈</button>
         `;
@@ -1026,7 +1019,6 @@ function showDateReveal() {
 
         ctx.textAlign = "center";
 
-        // 🎯 ALWAYS draw 28
         let alpha = Math.min(1, progress);
 
         ctx.globalAlpha = alpha;
@@ -1042,7 +1034,6 @@ function showDateReveal() {
 
         ctx.globalAlpha = 1;
 
-        // 🎯 THEN add MARCH (not replace)
         if (progress > 2) {
             let marchAlpha = Math.min(1, progress - 2);
 
@@ -1122,7 +1113,7 @@ function showFinal() {
                 });
             }
         }
-        // in showFinal AFTER funnyIntro
+        
         fadeOut(finalMusic, 800).then(() => {
             birthdayExtra.play();
         });
@@ -1134,13 +1125,10 @@ function showFinal() {
 
     <div class="cakeScene">
 
-        <!-- LEFT HALF -->
         <img src="images/cake.png" class="cake half left" id="cakeLeft">
 
-        <!-- RIGHT HALF -->
         <img src="images/cake.png" class="cake half right" id="cakeRight">
 
-        <!-- 🔪 knife -->
         <div class="knife" id="knife"></div>
 
     </div>
@@ -1157,7 +1145,6 @@ function showFinal() {
 
         btn.onclick = () => {
 
-            // 🔪 knife entry
             knife.style.opacity = 1;
             knife.style.left = "80px";
             knife.style.top = "30px";
@@ -1165,21 +1152,18 @@ function showFinal() {
             setTimeout(() => {
                 showEmotionalScreen();
             }, 5000);
-            // 💥 cut moment
+            
             setTimeout(() => {
 
-                // ✂️ split cake
                 left.style.transform = "translateX(-40px) rotate(-10deg)";
                 right.style.transform = "translateX(40px) rotate(10deg)";
 
-                // 💥 effects
                 explodeEffect(window.innerWidth / 2, window.innerHeight / 2);
                 heartBurst(window.innerWidth / 2, window.innerHeight / 2);
 
             }, 500);
 
 
-            // 🎉 final polish
             setTimeout(() => {
                 knife.style.opacity = 0;
                 characterSay("Happy Birthday ❤️");
@@ -1221,7 +1205,6 @@ function showFinal() {
             setTimeout(() => {
                 line.classList.add("show");
 
-                // 🔥 smooth scroll instead of jump
                 box.scrollTop = box.scrollHeight;
 
             }, 700);
@@ -1263,7 +1246,6 @@ function showFinal() {
 
         function startFinalCinematic() {
 
-            // 💖 stop hearts (optional)
             document.getElementById("emotionalScreen").style.opacity = 0;
 
             setTimeout(() => {
@@ -1278,7 +1260,6 @@ function showFinal() {
 
                 typeFinal(line, text);
 
-                // 🎵 music boost
                 if (birthdayExtra) {
                     birthdayExtra.volume = 0.3;
                     birthdayExtra.play().catch(() => { });
@@ -1307,7 +1288,6 @@ function showFinal() {
 
                 } else {
 
-                    // ✨ final glow pulse
                     setInterval(() => {
                         el.style.textShadow =
                             "0 0 20px hotpink, 0 0 40px deeppink";
@@ -1463,7 +1443,6 @@ let currentMusic = null;
 function switchTrack(nextAudio, duration = 800) {
     if (currentMusic === nextAudio) return;
 
-    // fade out current
     let out = currentMusic ? fadeOut(currentMusic, duration) : Promise.resolve();
 
     out.then(() => {
