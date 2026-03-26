@@ -500,7 +500,6 @@ button:active {
     object-fit: cover;
     border-radius: 14px;
     background-position: top;
-    /* 💖 glowing border */
     box-shadow:
         0 0 10px hotpink,
         0 0 20px deeppink,
@@ -526,14 +525,12 @@ button:active {
     background-position: center;
 }
 
-/* 🌸 back layer (blurred) */
 .layer-back {
     background: url("dream.jpg") center/cover no-repeat;
     filter: blur(4px) brightness(0.9);
     animation: moveSlow 30s linear infinite;
 }
 
-/* ✨ front glow layer */
 .layer-front {
     background: radial-gradient(circle at 50% 50%, rgba(255, 192, 203, 0.3), transparent);
     animation: moveFast 20s linear infinite;
@@ -636,7 +633,6 @@ img.shake {
     transition: all 0.3s ease;
 }
 
-/* 😇 YES BUTTON */
 #yesBtn {
     background: linear-gradient(45deg, hotpink, deeppink);
     color: white;
@@ -651,7 +647,6 @@ img.shake {
     box-shadow: 0 0 25px hotpink, 0 0 40px deeppink;
 }
 
-/* 😈 NO BUTTON */
 #noBtn,
 #cuteNo,
 #deserveNo {
@@ -667,7 +662,6 @@ img.shake {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }
 
-/* 😏 hover = playful, not ugly */
 #noBtn:hover,
 #cuteNo:hover,
 #deserveNo:hover {
@@ -720,7 +714,6 @@ img.shake {
     text-shadow: 0 0 10px white;
 }
 
-/* 🎂 SCENE FIX */
 .cakeScene {
     position: relative;
     width: 220px;
@@ -728,7 +721,6 @@ img.shake {
     margin: 40px auto;
 }
 
-/* 🎂 BASE CAKE STYLE */
 .cake {
     width: 220px;
     height: auto;
@@ -738,7 +730,6 @@ img.shake {
     transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ✂️ PERFECT HALF CUT */
 .left {
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 }
@@ -747,7 +738,6 @@ img.shake {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
-/* ✨ GLOW UPGRADE */
 .cakeScene::after {
     content: "";
     position: absolute;
@@ -764,7 +754,6 @@ img.shake {
     z-index: 0;
 }
 
-/* 🎯 FLOAT ANIMATION */
 .cakeScene {
     animation: floatCake 4s ease-in-out infinite;
 }
@@ -783,7 +772,6 @@ img.shake {
     }
 }
 
-/* 🔪 BETTER KNIFE */
 .knife {
     position: absolute;
     width: 140px;
@@ -799,7 +787,6 @@ img.shake {
     opacity: 0;
 }
 
-/* 💖 MESSAGE IMPROVED */
 .insideMsg {
     position: absolute;
     top: 50%;
@@ -826,7 +813,6 @@ img.shake {
     overflow: hidden;
 }
 
-/* 💖 box */
 .emotionalBox {
     max-width: 320px;
     padding: 20px;
@@ -874,7 +860,6 @@ img.shake {
     margin-top: 350px;
     transition: transform 0.6s ease;
     overflow-y: auto;
-    /* ✅ enable scroll */
     scroll-behavior: smooth;
 
     justify-content: flex-start;
