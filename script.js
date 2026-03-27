@@ -1,3 +1,13 @@
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('copy', function(e) {
+  e.preventDefault();
+});
+
 // ---------- GLOBAL ----------
 let photos = [];
 let music, finalMusic, galleryMusic, birthdayExtra;
