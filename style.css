@@ -3,7 +3,10 @@ body {
     font-family: sans-serif;
     text-align: center;
     overflow: hidden;
-
+    -webkit-user-select: none;
+    -moz-user-select: none;   
+    -ms-user-select: none;     
+    user-select: none;   
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
     color: #fff;
 }
