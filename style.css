@@ -4,9 +4,9 @@ body {
     text-align: center;
     overflow: hidden;
     -webkit-user-select: none;
-    -moz-user-select: none;   
-    -ms-user-select: none;     
-    user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
     color: #fff;
 }
@@ -529,7 +529,7 @@ button:active {
 }
 
 .layer-back {
-    background: url("dream.jpg") center/cover no-repeat;
+    background: url("images/dream.jpg") center/cover no-repeat;
     filter: blur(4px) brightness(0.9);
     animation: moveSlow 30s linear infinite;
 }
@@ -784,8 +784,8 @@ img.shake {
     box-shadow:
         0 0 15px white,
         0 0 30px rgba(255, 255, 255, 0.5);
-    top: -50px;
-    left: -100px;
+    top: 90px;
+    left: -20px;
     transform: rotate(-25deg);
     opacity: 0;
 }
@@ -910,7 +910,7 @@ img.shake {
 #dateReveal {
     position: fixed;
     inset: 0;
-    background: black; 
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;

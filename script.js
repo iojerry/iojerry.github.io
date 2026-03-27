@@ -1,11 +1,11 @@
-document.addEventListener('selectstart', function(e) {
-  e.preventDefault();
+document.addEventListener('selectstart', function (e) {
+    e.preventDefault();
 });
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
 });
-document.addEventListener('copy', function(e) {
-  e.preventDefault();
+document.addEventListener('copy', function (e) {
+    e.preventDefault();
 });
 
 // ---------- GLOBAL ----------
@@ -1097,7 +1097,6 @@ function showDateReveal() {
 // ---------- FINAL ----------
 function showFinal() {
     show("final");
-
     if (music) {
         music.pause();
         music.currentTime = 0;
@@ -1109,6 +1108,8 @@ function showFinal() {
     }
 
     funnyIntro(() => {
+        startDreamyBackground();
+        startHearts();
         if (birthdayExtra) {
             birthdayExtra.currentTime = 0;
             birthdayExtra.volume = 1;
@@ -1123,7 +1124,7 @@ function showFinal() {
                 });
             }
         }
-        
+
         fadeOut(finalMusic, 800).then(() => {
             birthdayExtra.play();
         });
@@ -1156,13 +1157,13 @@ function showFinal() {
         btn.onclick = () => {
 
             knife.style.opacity = 1;
-            knife.style.left = "80px";
-            knife.style.top = "30px";
+            knife.style.left = "-20px";
+            knife.style.top = "280px";
             knife.style.transition = "0.4s ease";
             setTimeout(() => {
                 showEmotionalScreen();
-            }, 5000);
-            
+            }, 3500);
+
             setTimeout(() => {
 
                 left.style.transform = "translateX(-40px) rotate(-10deg)";
@@ -1182,7 +1183,6 @@ function showFinal() {
 
 
         function showEmotionalScreen() {
-
             show("emotionalScreen");
 
             let messages = [
@@ -1192,7 +1192,6 @@ function showFinal() {
                 "You are the reason behind so many smiles 💖",
                 "And honestly...",
                 "You mean more than you think ❤️",
-                " ",
                 " ",
                 " ",
                 "Again....",
