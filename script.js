@@ -1182,7 +1182,12 @@ function showFinal() {
                 "You are the reason behind so many smiles 💖",
                 "And honestly...",
                 "You mean more than you think ❤️",
-                "Thank you"
+                " ",
+                " ",
+                " ",
+                "Again....",
+                "HAPPY BIRTHDAY",
+                "Stay safe stay happy"
             ];
 
             playStackMessages(messages, 0);
